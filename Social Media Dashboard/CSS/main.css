@@ -45,6 +45,11 @@ input {
   display: block;
 }
 
+label {
+  font-weight: bold;
+  color: var(--txt-2);
+}
+
 #switcher {
   appearance: none;
   display: block;
@@ -126,10 +131,32 @@ input {
 @media screen and (max-width: 820px) {
   .grid {
     grid-template-columns: 1fr;
-  } 
+  }
 
   #container {
     max-width: 420px;
+  }
+
+  .title-block {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--txt-2);
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  header.flex {
+    flex-direction: column;
+  }
+
+  .toggle-block {
+    justify-content: space-between !important;
+    width: 100%;
+    align-items: center;
+  }
+
+  .toggle * {
+    display: block;
+    /* flex-grow: 1; */
   }
 }
 
