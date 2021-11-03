@@ -1,0 +1,245 @@
+:root {
+  --card-bg: hsl(227, 47%, 96%);
+  --txt: hsl(230, 17%, 14%);
+  --txt-2: hsl(228, 12%, 44%);
+  --bg-top: hsl(225, 100%, 98%);
+  --bg: #fff;
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --youtube: hsl(348, 97%, 39%);
+  --green: hsl(163, 72%, 41%);
+  --red: hsl(356, 69%, 56%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--txt);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--txt);
+}
+
+h3.title {
+  color: var(--txt-2);
+}
+
+input {
+  display: block;
+}
+
+#container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 32vh;
+  z-index: -1;
+  width: 100%;
+  margin: initial;
+  border-radius: 0 0px 16px 16px;
+  background: var(--bg-top);
+}
+
+#container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 24px;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.card-1 {
+  text-align: center;
+}
+
+.card-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  justify-content: center;
+}
+
+.card-2 * {
+  justify-self: center;
+}
+
+.fb-card.card-1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: var(--facebook);
+  height: 4px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 0.875rem;
+}
+
+.twitter-card.card-1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: var(--twitter);
+  height: 4px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 0.875rem;
+}
+
+.instagram-card.card-1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  height: 4px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 0.875rem;
+}
+
+.yt-card.card-1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--youtube);
+  height: 4px;
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 0.875rem;
+}
+
+.card-1 h3 {
+  font-size: 2.5rem;
+}
+
+.card-1 a {
+  display: block;
+  text-decoration: none;
+  color: var(--txt-2);
+}
+
+.card-1__span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-1__span img {
+  display: block;
+  margin-right: 0.875rem;
+}
+
+.card-1 .social {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--txt-2);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  display: block;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: var(--txt-2);
+}
+
+.stonks {
+  color: var(--green);
+  position: relative;
+}
+
+.stonks::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -1rem;
+  top: 8px;
+  height: 4px;
+  width: 8px;
+  background: url('../images/icon-up.svg');
+}
+
+.not-stonks {
+  color: var(--red);
+  position: relative;
+}
+
+.not-stonks::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -1rem;
+  top: 8px;
+  height: 4px;
+  width: 8px;
+  background: url('../images/icon-down.svg');
+}
+
+.mg-top-2 {
+  margin-top: 2rem;
+}
+
+.mg-tb-15 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */
